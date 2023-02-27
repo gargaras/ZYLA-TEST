@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::controller(ModelClimateController::class)->group(function () {
     Route::get('current/{query?}', 'show');
     Route::get('currents', 'store')->name('store');
-    Route::get('currentess','update')->neme('update');
+    Route::get('currentess','update')->name('update');
 });

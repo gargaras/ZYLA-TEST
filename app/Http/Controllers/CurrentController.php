@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCurrent;
 use App\Models\Current;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+
+use App\Http\Controllers\LocationController;
+use App\Models\Location;
+use App\Models\ModelClimate;
 
 class CurrentController extends Controller
 {
@@ -18,22 +24,12 @@ class CurrentController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCurrent $request)
     {
         //
     }
@@ -41,21 +37,10 @@ class CurrentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Current  $current
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Current $current)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Current  $current
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Current $current)
+    public function show( $query=null )
     {
         //
     }
@@ -64,10 +49,10 @@ class CurrentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Current  $current
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Current $current)
+    public function update(StoreCurrent $request, Current $current)
     {
         //
     }
@@ -75,10 +60,10 @@ class CurrentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Current  $current
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Current $current)
+    public function destroy($id)
     {
         //
     }
